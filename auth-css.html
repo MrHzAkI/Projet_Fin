@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js"> 
+    <head>
+        <meta charset="UTF-8" />
+        <title></title>
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
+    </head>
+    <body>
+                <div class="clr"></div>
+            </div>
+            <header>
+               
+				<nav class="codrops-demos">
+					
+					
+					<a href="auth-css.html">Menu principale</a>
+					
+				</nav>
+            </header>
+            <section>				
+                <div id="container_demo" >
+                    <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                            <form  action="ver_log.php" methode="post"> 
+                                <h1>Authentification cliente</h1> 
+                                <p> 
+                                    <label for="username" class="uname" data-icon="u" > Votre email ou nom d'utilisateur </label>
+                                    <input id="username" name="login" required type="text" placeholder="ex : mon nom ou nom@mail.com"/>
+                                </p>
+                                <p> 
+                                    <label for="password" class="youpasswd" data-icon="p"> Votre mot de passe </label>
+                                    <input id="password" name="mdp" required type="password" /> 
+                                </p>
+                                <p class="keeplogin"> 
+									<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
+									<label for="loginkeeping">Garder ma session active</label>
+								</p>
+                                <p class="login button"> 
+                                    <input type="submit" value="Connexion" /> 
+								</p>
+                                <p class="change_link">
+									Vous n'êtes pas membre ?
+									<a href="#toregister" class="to_register">S'inscrire</a>
+								</p>
+                            </form>
+                        </div>
+
+                        <div id="register" class="animate form">
+                            <form  action="rec_client.php" method="post"> 
+                                <h1> Inscription cliente </h1> 
+ 								<p> 
+                                    <label for="username" class="uname" data-icon="u" > Votre numero de compte </label>
+                                    <input id="username" name="num_cmpt" required type="text" placeholder="_____________________________"/>
+                                </p>
+                                <p> 
+                                    <label for="username" class="uname" data-icon="u" > Votre nom </label>
+                                    <input id="username" name="nom" required type="text" placeholder="_____________________________"/>
+                                </p>
+                                <p> 
+                                    <label for="username" class="uname" data-icon="u" > Votre prenom </label>
+                                    <input id="username" name="prenom" required type="text" placeholder="_____________________________"/>
+                                </p>
+                               <p> 
+                                    <label for="emailsignup" class="youmail" data-icon="e" > Votre adresse mail</label>
+                                    <input id="emailsignup" name="add_mail" required type="email" placeholder="_____________________________"/> 
+                                </p>
+                                  <p> 
+                                    <label for="username" class="uname" data-icon="u" > Votre numero de telephone</label>
+                                    <input id="username" name="num_tel" required type="tel" placeholder="_____________________________"/>
+                               
+                                <p> 
+                                    <label for="passwordsignup" class="youpasswd" data-icon="p">Votre mot de passe </label>
+                                    <input id="passwordsignup" name="mdp" required type="password" placeholder="_____________________________"/>
+                                </p>
+                                <p> 
+                                    <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">Confirmer votre mot de passe </label>
+                                    <input id="passwordsignup_confirm" name="mdp_conf" required type="password" placeholder="_____________________________"/>
+                                </p>
+                                <p class="signin button"> 
+									<input type="submit" value="S'inscrire"/> 
+								</p>
+                                <p class="change_link">  
+									Vous vous êtes déja inscri ?
+									<a href="#tologin" class="to_register">  page d'authentification </a>
+								</p>
+                            </form>
+                        </div>
+						
+                    </div>
+                </div>  
+            </section>
+        </div>
+        <script language="javascript">
+
+function password_complexity(myPassword)
+
+{
+
+var myPassword = document.getElementById('mdp');
+
+var myRegex = new
+
+RegExp("^(?=.*[a-z]+)(?=.*[A-Z]+)([^\/*s@2~#&]{6,})$", "g");
+
+if(myPassword.value.match(myRegex)){
+
+myPassword.style.backgroundColor = "green";
+
+} else {
+
+myPassword.style.backgroundColor = "red";
+
+}
+
+}
+
+</script>
+    </body>
+</html>
